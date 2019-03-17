@@ -336,16 +336,16 @@ add_action( 'save_post', 'prfx_meta_save' );
 */
 
 function theme_name_scripts() {
-  wp_enqueue_style( 'style-bootstrap', "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" );
+  wp_enqueue_style( 'style-bootstrap', "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" );
   wp_enqueue_style( 'style-slick', get_template_directory_uri() . '/assets/slick.css' );
   wp_enqueue_style( 'style-main', get_stylesheet_uri() );
   wp_enqueue_style( 'style-magnific', get_template_directory_uri().'/assets/magnific.css');
-  wp_enqueue_style( 'fontawesome', 'http:////maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
-  wp_enqueue_style( 'google-font-PT-Sans', 'http:////fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' );
-  wp_enqueue_style( 'google-font-Pacifi', 'http:////fonts.googleapis.com/css?family=Pacifico' );
+  wp_enqueue_style( 'fontawesome', 'https:////maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
+  wp_enqueue_style( 'google-font-PT-Sans', 'https:////fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' );
+  wp_enqueue_style( 'google-font-Pacifi', 'https:////fonts.googleapis.com/css?family=Pacifico' );
 
   wp_enqueue_script( 'jquery' );
-  wp_enqueue_script( 'script-bootstrap', 'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js');
+  wp_enqueue_script( 'script-bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js');
   wp_enqueue_script( 'script-slick', get_template_directory_uri() . '/assets/slick.js' );
   wp_enqueue_script( 'script-magnific', get_template_directory_uri() . '/assets/magnific.js' );
   wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/script.js', true );
