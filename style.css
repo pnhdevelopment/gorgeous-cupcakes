@@ -17,8 +17,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
 * GENERAL STYLES
 */
 
+html {
+    margin-top: 0px !important;
+}
+
 body{
   background: url('assets/theme-background.png');
+  font-size: 1.4rem;
 }
 
 body, img {
@@ -205,6 +210,7 @@ header .slogan {
 header .logo {
   padding: 10px;
   z-index: 1;
+  width: 179px;
 }
 
 @media (min-width: 1200px) {
@@ -719,7 +725,7 @@ section.slideshow .slick-arrow.slick-prev:before {
 */
 footer {
   background: #2D2D2D;
-  margin-bottom: 10px;
+  /*margin-bottom: 10px;*/
   background-image: url('assets/zigzag.png');
 }
 

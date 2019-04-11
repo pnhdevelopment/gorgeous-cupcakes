@@ -455,5 +455,18 @@ function dashboard_widgets_init() {
 add_action( 'widgets_init', 'dashboard_widgets_init' );
 
 
-?>
 
+
+// Enable svg uploads in Media Library
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
+
+
+function my_function_admin_bar(){ return false; }
+add_filter( 'show_admin_bar' , 'my_function_admin_bar');
+
+
+?>

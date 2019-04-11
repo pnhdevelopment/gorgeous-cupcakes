@@ -104,14 +104,25 @@ wp_head();
       </h1>
       <div class='col-lg-6'>
         <div>
-          <img src="<?php bloginfo('template_url'); ?>/assets/pickups.png">
+          <!-- <svg class="icon" style="width:50px; height: 50px;">
+            <use xlink:href="<?php //bloginfo('template_url'); ?>/assets/svg-icons/sprite.svg#pickups"></use>
+          </svg> -->
+          <!-- <img src="<?php bloginfo('template_url'); ?>/assets/pickups.png"> -->
+          <img src="<?php bloginfo('template_url'); ?>/assets/svg-icons/pickups.svg" alt="pickups" style="width:60px; height: 60px;">
           <h3>Pickups</h3>
           <?php echo get_option('pickups'); ?>
         </div>
       </div>
       <div class='col-lg-6'>
         <div>
-          <img src="<?php bloginfo('template_url'); ?>/assets/deliveries.png">
+          <img src="<?php bloginfo('template_url'); ?>/assets/svg-icons/deliveries.svg" alt="deliveries" style="width:60px; height: 60px;">
+<!--           <svg class="icon" style="width:50px; height: 50px;">
+            <use xlink:href="<?php //bloginfo('template_url'); ?>/assets/svg-icons/sprite.svg#pickups"></use>
+          </svg>
+
+          <svg class="icon" style="width:50px; height: 50px;">
+          <use xlink:href="<?php //bloginfo('template_url'); ?>/assets/svg-icons/sprite.svg#phone"></use>
+        </svg><br/> -->
           <h3>Deliveries</h3>
           <?php echo get_option('deliveries'); ?>
         </div>
@@ -119,8 +130,8 @@ wp_head();
     </section>
     <!-- CONTACT US -->
     <section class='contact-us text-center row'>
-      <h1>
-        <span id="contact-us">Contact Us</span>
+      <h1 id="contact-us">
+        <span>Contact Us</span>
       </h1>
       
       <div class='col-lg-6'>
@@ -136,14 +147,23 @@ wp_head();
 
       <div class='col-lg-6 contact-info'>
         <div>
-        <span class="glyphicon glyphicon-phone-alt"></span>
-          <br> <?php echo get_option('contact_number'); ?>
+          <img src="<?php bloginfo('template_url'); ?>/assets/svg-icons/phone.svg" alt="phone" style="width: 50px; height: 50px;">
+          <!--  <svg class="icon" style="width:50px; height: 50px;">
+            <use xlink:href="<?php //bloginfo('template_url'); ?>/assets/svg-icons/sprite.svg#phone"></use>
+          </svg><br/> -->
+
+          <!-- <span class="glyphicon glyphicon-phone-alt"></span> -->
+          <br><?php echo get_option('contact_number'); ?>
         </div>
         <br>
 
         <div>
-        <span class="glyphicon glyphicon-envelope"></span>
-          <br> sales@gorgeouscupcakes.com.au
+          <img src="<?php bloginfo('template_url'); ?>/assets/svg-icons/mail.svg" alt="mail" style="width: 50px; height: 50px;">
+        <!-- <span class="glyphicon glyphicon-envelope"></span> -->
+        <!-- <svg class="icon" style="width:50px; height: 50px;">
+          <use xlink:href="<?php bloginfo('template_url'); ?>/assets/svg-icons/sprite.svg#mail"></use>
+        </svg> -->
+          <br>sales@gorgeouscupcakes.com.au
         </div>
         <br>
 
