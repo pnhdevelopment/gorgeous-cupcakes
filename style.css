@@ -18,12 +18,23 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 
 html {
-    margin-top: 0px !important;
+  margin-top: 0px !important;
 }
 
 body{
   background: url('assets/theme-background.png');
   font-size: 1.4rem;
+  margin: 0;
+}
+
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
 }
 
 body, img {
@@ -143,6 +154,9 @@ section {
   text-align: center; 
 }
 
+.wspsc_cart_header_image{
+  display: none;
+}
 
 /* END my cart */
 
@@ -855,6 +869,14 @@ footer .copyright {
 
 
 /*
+* YOUR CART
+*/
+.your-cart{
+  background: #FCE1FF;
+}
+
+
+/*
 * LOGIN & SIGNUP PAGES
 */
 .login-section, .signup-section {
@@ -930,7 +952,3 @@ footer .copyright {
   padding-left: 30px;
 }
 /* END our policies page */
-
-
-
-

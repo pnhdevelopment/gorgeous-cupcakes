@@ -13,7 +13,7 @@ wp_head();
         $posts = new WP_Query($args);
         if( $posts->have_posts() ): while( $posts->have_posts() ) : $posts->the_post(); ?>
         <div>
-          <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>">
+          <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>" alt="<?php the_title(); ?>">
           <span class="slider-caption"><?php the_title(); ?></span>
         </div>
         <?php endwhile; endif; ?>
@@ -32,7 +32,7 @@ wp_head();
             <div class='col-lg-3 col-md-6 col-sm-6 col-xs-6'>
               <a href="cupcakes#<?php echo $term->slug; ?>">
                 <div>
-                  <img class="cupcake" src="<?php echo z_taxonomy_image_url($term->term_id); ?>">
+                  <img class="cupcake" src="<?php echo z_taxonomy_image_url($term->term_id); ?>" alt="<?php echo $term->name; ?>">
                   <img src="<?php echo $url ?>" class="cupcake-logo">
                   <span class='event'><?php echo $term->name; ?></span>
                 </div>
@@ -65,7 +65,7 @@ wp_head();
         <div class='col-lg-6 main-thumb'>
           <a href="cupcakes#<?php echo $post->post_name ?>">
             <div>
-              <img class='fav-thumb' src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>">
+              <img class='fav-thumb' src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>" alt="<?php the_title(); ?>">
               <img class='cupcake-logo' src="<?php echo $url ?>">
               <span class='caption'><?php the_title(); ?></span>
             </div>
@@ -79,7 +79,7 @@ wp_head();
           <div class='col-lg-6 col-md-6 col-sm-6 col-xs-6'>
             <a href="cupcakes#<?php echo $post->post_name ?>">
               <div>
-                <img src="<?php echo $attachments->url(); ?>" class="fav-thumb">
+                <img src="<?php echo $attachments->url(); ?>" class="fav-thumb" alt="<?php echo $post->post_name ?>">
                 <img src="<?php echo $url; ?>" class="cupcake-logo">
               </div>
             </a>
@@ -104,10 +104,6 @@ wp_head();
       </h1>
       <div class='col-lg-6'>
         <div>
-          <!-- <svg class="icon" style="width:50px; height: 50px;">
-            <use xlink:href="<?php //bloginfo('template_url'); ?>/assets/svg-icons/sprite.svg#pickups"></use>
-          </svg> -->
-          <!-- <img src="<?php bloginfo('template_url'); ?>/assets/pickups.png"> -->
           <img src="<?php bloginfo('template_url'); ?>/assets/svg-icons/pickups.svg" alt="pickups" style="width:60px; height: 60px;">
           <h3>Pickups</h3>
           <?php echo get_option('pickups'); ?>
@@ -116,13 +112,6 @@ wp_head();
       <div class='col-lg-6'>
         <div>
           <img src="<?php bloginfo('template_url'); ?>/assets/svg-icons/deliveries.svg" alt="deliveries" style="width:60px; height: 60px;">
-<!--           <svg class="icon" style="width:50px; height: 50px;">
-            <use xlink:href="<?php //bloginfo('template_url'); ?>/assets/svg-icons/sprite.svg#pickups"></use>
-          </svg>
-
-          <svg class="icon" style="width:50px; height: 50px;">
-          <use xlink:href="<?php //bloginfo('template_url'); ?>/assets/svg-icons/sprite.svg#phone"></use>
-        </svg><br/> -->
           <h3>Deliveries</h3>
           <?php echo get_option('deliveries'); ?>
         </div>
@@ -148,21 +137,12 @@ wp_head();
       <div class='col-lg-6 contact-info'>
         <div>
           <img src="<?php bloginfo('template_url'); ?>/assets/svg-icons/phone.svg" alt="phone" style="width: 50px; height: 50px;">
-          <!--  <svg class="icon" style="width:50px; height: 50px;">
-            <use xlink:href="<?php //bloginfo('template_url'); ?>/assets/svg-icons/sprite.svg#phone"></use>
-          </svg><br/> -->
-
-          <!-- <span class="glyphicon glyphicon-phone-alt"></span> -->
           <br><?php echo get_option('contact_number'); ?>
         </div>
         <br>
 
         <div>
           <img src="<?php bloginfo('template_url'); ?>/assets/svg-icons/mail.svg" alt="mail" style="width: 50px; height: 50px;">
-        <!-- <span class="glyphicon glyphicon-envelope"></span> -->
-        <!-- <svg class="icon" style="width:50px; height: 50px;">
-          <use xlink:href="<?php bloginfo('template_url'); ?>/assets/svg-icons/sprite.svg#mail"></use>
-        </svg> -->
           <br>sales@gorgeouscupcakes.com.au
         </div>
         <br>

@@ -7,7 +7,13 @@
 
   <title><?php wp_title('&raquo;','true','right'); ?><?php bloginfo('name'); ?></title>
 
-  <body class='container'>
+  <!-- <link rel="shortcut icon" href="#"> -->
+    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
+
+
+
+
+  <body class='container Site'>
     <div class="row cart-display" style="display:none">
       <?php if ( is_active_sidebar( 'shopping-cart-widget-area' ) ) : ?>
         <?php dynamic_sidebar( 'shopping-cart-widget-area' ); ?>
@@ -55,3 +61,5 @@
         </div>
       </div>
     </nav>
+
+    <main class="Site-content">
